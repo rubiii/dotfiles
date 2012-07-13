@@ -1,0 +1,24 @@
+# GENERAL
+
+--smart-case
+--follow
+--color
+
+
+# TYPES
+
+--type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
+--type-set=csv=.txt,.csv,.tsv
+--type-add=ruby=.rake
+--type-add=html=.erb,.haml,.slim
+--type-add=js=.coffee
+--type-add=css=.scss,.sass
+--type-set=cucumber=.feature
+
+
+# IGNORES
+
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=doc
+--ignore-dir=coverage
