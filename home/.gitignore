@@ -1,0 +1,41 @@
+# global gitignore. execute once to include:
+# git config --global core.excludesfile ~/.gitignore
+
+# compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+.rbx
+
+# packages
+#
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# logs and databases
+*.log
+*.sql
+*.sqlite
+
+# os
+.DS_Store?
+Icon?
+Thumbs.db
+
+# vim
+*.swp
+tags
+
+# rvm
+.rvmrc
