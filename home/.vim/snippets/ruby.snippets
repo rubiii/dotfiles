@@ -1,0 +1,184 @@
+snippet #!
+	#!/usr/bin/env ruby
+	${1}
+snippet req
+	require "${1}"${2}
+snippet reqsh
+	require "spec_helper"${1}
+snippet end
+	__END__
+snippet case
+	case ${1:object}
+		when ${2:condition}
+	end
+snippet if
+	if ${1:condition}
+		${2}
+	end
+snippet ife
+	if ${1:condition}
+		${2}
+	else
+		${3}
+	end
+snippet unless
+	unless ${1:condition}
+		${2}
+	end
+snippet while
+	while ${1:condition}
+		${2}
+	end
+snippet until
+	until ${1:condition}
+		${2}
+	end
+snippet cla class .. end
+	class ${1:`substitute(Filename(), '^.', '\u&', '')`}
+		${2}
+	end
+snippet mod module .. end
+	module ${1:`substitute(Filename(), '^.', '\u&', '')`}
+		${2}
+	end
+snippet r
+	attr_reader :${1:attr_names}
+snippet w
+	attr_writer :${1:attr_names}
+snippet rw
+	attr_accessor :${1:attr_names}
+snippet def
+	def ${1:method_name}
+		${2}
+	end
+snippet defi
+	def initialize${1}
+		${2}
+	end
+snippet deft
+	def test_${1:case_name}
+		${2}
+	end
+snippet defs
+	def self.${1:class_method_name}
+		${2}
+	end
+snippet defmm
+	def method_missing(meth, *args, &blk)
+		${1}
+	end
+snippet alias
+	alias ${1:new_name} ${2:old_name}
+snippet aliasm
+	alias_method :${1:new_name}, :${2:old_name}
+snippet each
+	each { |${1:e}| ${2} }${3}
+snippet eachb
+	each_byte { |${1:byte}| ${2} }${3}
+snippet eachc
+	each_char { |${1:chr}| ${2} }${3}
+snippet eachc
+	each_cons(${1:2}) { |${2:group}| ${3} }${3}
+snippet eachi
+	each_index { |${1:i}| ${2} }${3}
+snippet eachk
+	each_key { |${1:key}| ${2} }${3}
+snippet eachl
+	each_line { |${1:line}| ${2} }${3}
+snippet eachp
+	each_pair { |${1:name}, ${2:val}| ${3} }${4}
+snippet eachs
+	each_slice(${1:2}) { |${2:group}| ${3} }${4}
+snippet eachv
+	each_value { |${1:val}| ${2} }${3}
+snippet eachwi
+	each_with_index { |${1:e}, ${2:i}| ${3} }${4}
+snippet inject
+	inject(${1:init}) { |${2:mem}, ${3:var}| ${4} }${5}
+snippet map
+	map { |${1:e}| ${2} }${3}
+snippet map&
+	map?(&:${1})${2}
+snippet mapwi-
+	enum_with_index.map { |${1:e}, ${2:i}| ${3} }${4}
+snippet sort
+	sort { |a, b| ${1} }${2}
+snippet sort&
+	sort?(&:${1})${2}
+snippet sorby
+	sort_by { |${1:e}| ${2} }${3}
+snippet all
+	all? { |${1:e}| ${2} }${3}
+snippet all&
+	all?(&:${1})${2}
+snippet any
+	any? { |${1:e}| ${2} }${3}
+snippet any&
+	any?(&:${1})${2}
+snippet fetch
+	fetch(${1:name}) { |${2:key}| ${3} }${4}
+snippet find
+	find { |${1:e}| ${2} }${3}
+snippet find&
+	find(&:${1})${2}
+snippet max
+	max { |a, b| ${1} }${2}
+snippet min
+	min { |a, b| ${1} }${2}
+snippet partition
+	partition { |${1:e}| ${2} }${3}
+snippet reject
+	reject { |${1:e}| ${2} }${3}
+snippet reject&
+	reject(&:${1})${2}
+snippet select
+	select { |${1:e}| ${2} }${3}
+snippet select&
+	select(&:${1})${2}
+snippet tap
+	tap { |${1:e}| ${2} }${3}
+snippet tap&
+	tap(&:${1})${2}
+snippet lamda
+	lambda { |${1:args}| ${2} }${3}
+snippet do
+	do |${1:variable}|
+		${2}
+	end
+snippet task
+	desc "${1:Task description}"
+	task :${2:task_name => [:dependent, :tasks]} do
+		${3}
+	end
+snippet des
+	describe "${1:description}" do
+	${2}
+	end
+snippet desc
+	describe ${1:class} do
+	${2}
+	end
+snippet con
+	context "${1:context}" do
+	${2}
+	end
+snippet subject
+	subject do
+		${1}
+	end
+snippet before-
+	before(:${1:each}) do
+		${2}
+	end
+snippet after-
+	after(:${1:each}) do
+		${2}
+	end
+snippet it
+	it "${1:description}" do
+		${2}
+	end
+snippet itp
+	it "${1:should have specs}"
+snippet exp
+	expect(${1}).to${2}
