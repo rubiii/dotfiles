@@ -143,11 +143,8 @@
     set ignorecase                               " ignore case in searches
     set smartcase                                " case sensitive if capitals are included
 
-    " esc to clear search highlights
-    " FIX: somehow breaks arrow keys in console vim
-    if has("gui_running")
-      nnoremap <esc> :noh<return><esc>
-    endif
+    " ctrl-c clears highlights
+    nmap <silent> <C-C> :noh<CR>
 
 
 " FILETYPES ---
